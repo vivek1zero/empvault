@@ -1,0 +1,183 @@
+
+> empvault@0.1.0 build
+> next build
+
+ ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+  ▲ Next.js 14.2.35
+  - Environments: .env
+
+   Creating an optimized production build ...
+ ⚠ Compiled with warnings
+
+./node_modules/jose/dist/webapi/lib/deflate.js
+A Node.js API is used (CompressionStream at line: 10) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/jose/dist/webapi/lib/deflate.js
+./node_modules/jose/dist/webapi/jwe/flattened/decrypt.js
+./node_modules/jose/dist/webapi/index.js
+./node_modules/@auth/core/jwt.js
+./node_modules/@auth/core/lib/init.js
+./node_modules/@auth/core/lib/index.js
+./node_modules/@auth/core/index.js
+./node_modules/next-auth/index.js
+
+./node_modules/jose/dist/webapi/lib/deflate.js
+A Node.js API is used (DecompressionStream at line: 26) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/jose/dist/webapi/lib/deflate.js
+./node_modules/jose/dist/webapi/jwe/flattened/decrypt.js
+./node_modules/jose/dist/webapi/index.js
+./node_modules/@auth/core/jwt.js
+./node_modules/@auth/core/lib/init.js
+./node_modules/@auth/core/lib/index.js
+./node_modules/@auth/core/index.js
+./node_modules/next-auth/index.js
+
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/17) ...
+   Generating static pages (4/17) 
+TypeError: Cannot read properties of null (reading 'useContext')
+    at t.useContext (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109421)
+    at d (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:22191)
+    at h (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:14129)
+    at au (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:10446)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:15122
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+    at a_ (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:49776)
+    at ab (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:11808)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16871
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908) {
+  digest: '1940824958'
+}
+TypeError: Cannot read properties of null (reading 'useContext')
+    at t.useContext (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109421)
+    at d (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:22191)
+    at h (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:14129)
+    at au (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:10446)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:15122
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+    at a_ (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:49776)
+    at ab (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:11808)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16871
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+
+Error occurred prerendering page "/_not-found". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot read properties of null (reading 'useContext')
+    at t.useContext (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109421)
+    at d (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:22191)
+    at h (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:14129)
+    at au (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:10446)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:15122
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+    at a_ (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:49776)
+    at ab (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:11808)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16871
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+TypeError: Cannot read properties of null (reading 'useContext')
+    at t.useContext (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109421)
+    at d (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:22191)
+    at h (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:14129)
+    at au (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:10446)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:15122
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+    at a_ (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:49776)
+    at ab (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:11808)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16871
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908) {
+  digest: '1940824958'
+}
+TypeError: Cannot read properties of null (reading 'useContext')
+    at t.useContext (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109421)
+    at d (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:22191)
+    at h (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:14129)
+    at au (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:10446)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:15122
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+    at a_ (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:49776)
+    at ab (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:11808)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16871
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+
+Error occurred prerendering page "/login". Read more: https://nextjs.org/docs/messages/prerender-error
+
+TypeError: Cannot read properties of null (reading 'useContext')
+    at t.useContext (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:109421)
+    at d (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:22191)
+    at h (C:\Employee  Management\empvault\.next\server\chunks\891.js:1:14129)
+    at au (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:10446)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:15122
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+    at a_ (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:49776)
+    at ab (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:11808)
+    at C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16871
+    at aw (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:35:16908)
+   Generating static pages (8/17) 
+   Generating static pages (12/17) 
+Error: <Html> should not be imported outside of pages/_document.
+Read more: https://nextjs.org/docs/messages/no-document-import-in-page
+    at Q (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\pages.runtime.prod.js:16:5430)
+    at I (C:\Employee  Management\empvault\.next\server\chunks\682.js:6:1263)
+    at renderWithHooks (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5658:16)
+    at renderIndeterminateComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5732:15)
+    at renderElement (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:6087:14)
+    at finishClassComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5688:3)
+    at renderClassComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5696:3)
+    at renderElement (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5954:7)
+
+Error occurred prerendering page "/404". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: <Html> should not be imported outside of pages/_document.
+Read more: https://nextjs.org/docs/messages/no-document-import-in-page
+    at Q (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\pages.runtime.prod.js:16:5430)
+    at I (C:\Employee  Management\empvault\.next\server\chunks\682.js:6:1263)
+    at renderWithHooks (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5658:16)
+    at renderIndeterminateComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5732:15)
+    at renderElement (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:6087:14)
+    at finishClassComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5688:3)
+    at renderClassComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5696:3)
+    at renderElement (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5954:7)
+Error: <Html> should not be imported outside of pages/_document.
+Read more: https://nextjs.org/docs/messages/no-document-import-in-page
+    at Q (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\pages.runtime.prod.js:16:5430)
+    at I (C:\Employee  Management\empvault\.next\server\chunks\682.js:6:1263)
+    at renderWithHooks (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5658:16)
+    at renderIndeterminateComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5732:15)
+    at renderElement (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:6087:14)
+    at finishClassComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5688:3)
+    at renderClassComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5696:3)
+    at renderElement (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5954:7)
+
+Error occurred prerendering page "/500". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: <Html> should not be imported outside of pages/_document.
+Read more: https://nextjs.org/docs/messages/no-document-import-in-page
+    at Q (C:\Employee  Management\empvault\node_modules\next\dist\compiled\next-server\pages.runtime.prod.js:16:5430)
+    at I (C:\Employee  Management\empvault\.next\server\chunks\682.js:6:1263)
+    at renderWithHooks (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5658:16)
+    at renderIndeterminateComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5732:15)
+    at renderElement (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5957:7)
+    at renderNodeDestructiveImpl (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:6115:11)
+    at renderNodeDestructive (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:6087:14)
+    at finishClassComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5688:3)
+    at renderClassComponent (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5696:3)
+    at renderElement (C:\Employee  Management\empvault\node_modules\react-dom\cjs\react-dom-server.browser.development.js:5954:7)
+ ✓ Generating static pages (17/17)
+
+> Export encountered errors on following paths:
+	/(auth)/login/page: /login
+	/_error: /404
+	/_error: /500
+	/_not-found/page: /_not-found

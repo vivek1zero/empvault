@@ -1,0 +1,129 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+
+model User {
+  id             String         @id @default(uuid())
+  email          String         @unique
+  name           String
+  password       String
+  avatar         String?
+  role           String         @default("EMPLOYEE")
+  department     String?
+  storageUsed    BigInt         @default(0)
+  storageQuota   BigInt         @default(5368709120) // 5GB
+  isActive       Boolean        @default(true)
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  files          File[]         @relation("UserFiles")
+  activityLogs   ActivityLog[]  @relation("UserActivityLogs")
+  categories     Category[]     @relation("UserCategories")
+  sharedWithMe   FileShare[]    @relation("SharedWithUser")
+  sharedByMe     FileShare[]    @relation("SharedByUser")
+  notifications  Notification[] @relation("UserNotifications")
+  favorites      Favorite[]     @relation("UserFavorites")
+}
+
+model Category {
+  id            String     @id @default(uuid())
+  name          String     @unique
+  description   String?
+  slug          String     @unique
+  parentId      String?
+  parent        Category?  @relation("SubCategories", fields: [parentId], references: [id])
+  children      Category[] @relation("SubCategories")
+  allowedRoles  String     @default("[]")
+  createdById   String
+  createdBy     User       @relation("UserCategories", fields: [createdById], references: [id])
+  isActive      Boolean    @default(true)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  files         File[]     @relation("CategoryFiles")
+}
+
+model File {
+  id             String       @id @default(uuid())
+  originalName   String
+  storedName     String       @unique
+  mimeType       String
+  size           BigInt
+  storageKey     String
+  bucketName     String    @default("empvault-documents")
+  storagePath    String    @default("")
+  fileType       String
+  status         String   @default("ACTIVE")
+  uploadedById   String
+  uploadedBy     User         @relation("UserFiles", fields: [uploadedById], references: [id])
+  categoryId     String?
+  category       Category?    @relation("CategoryFiles", fields: [categoryId], references: [id])
+  description    String?
+  tags           String       @default("[]")
+  version        Int          @default(1)
+  parentFileId   String?
+  parentFile     File?        @relation("FileVersions", fields: [parentFileId], references: [id])
+  versions       File[]       @relation("FileVersions")
+  downloadCount  Int          @default(0)
+  isPublic       Boolean      @default(false)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  deletedAt      DateTime?
+
+  shares         FileShare[]  @relation("FileShares")
+  activityLogs   ActivityLog[] @relation("FileActivityLogs")
+  favorites      Favorite[]    @relation("FileFavorites")
+}
+
+model Favorite {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation("UserFavorites", fields: [userId], references: [id], onDelete: Cascade)
+  fileId    String
+  file      File     @relation("FileFavorites", fields: [fileId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, fileId])
+}
+
+model FileShare {
+  id           String    @id @default(uuid())
+  fileId       String
+  file         File      @relation("FileShares", fields: [fileId], references: [id], onDelete: Cascade)
+  sharedWithId String
+  sharedWith   User      @relation("SharedWithUser", fields: [sharedWithId], references: [id], onDelete: Cascade)
+  sharedById   String
+  sharedBy     User      @relation("SharedByUser", fields: [sharedById], references: [id], onDelete: Cascade)
+  expiresAt    DateTime?
+  createdAt    DateTime  @default(now())
+}
+
+model ActivityLog {
+  id          String   @id @default(uuid())
+  action      String
+  userId      String
+  user        User     @relation("UserActivityLogs", fields: [userId], references: [id], onDelete: Cascade)
+  fileId      String?
+  file        File?    @relation("FileActivityLogs", fields: [fileId], references: [id], onDelete: SetNull)
+  metadata    String?
+  createdAt   DateTime @default(now())
+}
+
+model Notification {
+  id          String    @id @default(uuid())
+  userId      String
+  user        User      @relation("UserNotifications", fields: [userId], references: [id], onDelete: Cascade)
+  title       String
+  message     String
+  isRead      Boolean   @default(false)
+  type        String
+  link        String?
+  createdAt   DateTime  @default(now())
+}
